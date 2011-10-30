@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Andrew Nesbitt"]
   gem.email         = ["andrewnez@gmail.com"]
   gem.description   = %q{Ruby wrapper for the Lanyrd API}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{Ruby wrapper for the Lanyrd API}
   gem.homepage      = "http://github.com/andrew/lanyrd"
 
   gem.add_dependency 'faraday', '~> 0.7'
