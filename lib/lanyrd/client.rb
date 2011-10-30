@@ -15,7 +15,7 @@ module Lanyrd
     def speakers(event_id)
       get "speakers/#{event_id}/"
     end
-    
+
     def attendees(event_id)
       get "attendees/#{event_id}/"
     end
