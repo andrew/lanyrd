@@ -19,9 +19,13 @@ module Lanyrd
     def attendees(event_id)
       get "attendees/#{event_id}/"
     end
+    
+    def schedule(event_id)
+      get "schedule/#{event_id}/"
+    end
 
     def get(path)
-      response = conenction.get path
+      response = connection.get path
       decode response.body
     end
 
@@ -30,7 +34,7 @@ module Lanyrd
       CFPropertyList.native_types(plist.value)
     end
 
-    def conenction
+    def connection
       Faraday.new(:url => 'http://lanyrd.com/mobile/ios/')
     end
   end

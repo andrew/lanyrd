@@ -27,4 +27,8 @@ describe Lanyrd::Client do
   it "should return attendees for an event" do
     @lanyrd.attendees('cfdbd').should be_an_instance_of Hash
   end
+  
+  it "should return the schedule for an event" do
+    @lanyrd.schedule('cfdbd').should be_an_instance_of Hash
+  end
 end
