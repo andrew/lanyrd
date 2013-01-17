@@ -25,4 +25,4 @@ Tests can be ran with `rake spec`
 
 ## Copyright
 
-Copyright (c) 2011 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/lanyrd/blob/master/LICENSE) for details.
+Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/lanyrd/blob/master/LICENSE) for details.
