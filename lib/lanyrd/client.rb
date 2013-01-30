@@ -5,24 +5,30 @@ module Lanyrd
     end
 
     def popular
-      get "popular/"
+      get "search/"
     end
 
-    def event(id)
-      get "event/#{id}/"
+    def event(slug, year = Time.now.year)
+      get "#{year}/#{slug}/"
     end
 
-    def speakers(event_id)
-      get "speakers/#{event_id}/"
+    def speakers(slug, year = Time.now.year)
+      get "#{year}/#{slug}/speakers/"
     end
 
-    def attendees(event_id)
-      get "attendees/#{event_id}/"
+    def attendees(slug, year = Time.now.year)
+      get "#{year}/#{slug}/attendees/"
     end
     
-    def schedule(event_id)
-      get "schedule/#{event_id}/"
+    def schedule(slug, year = Time.now.year)
+      get "#{year}/#{slug}/schedule/"
     end
+    
+    def profile(username)
+      get "profile/#{username}/"
+    end
+
+    private
 
     def get(path)
       response = connection.get path
@@ -30,12 +36,11 @@ module Lanyrd
     end
 
     def decode(data)
-      plist = CFPropertyList::List.new(:data => data)
-      CFPropertyList.native_types(plist.value)
+      JSON.parse(data)
     end
 
     def connection
-      Faraday.new(:url => 'http://lanyrd.com/mobile/ios/')
+      Faraday.new(:url => 'http://lanyrd.com/mobile/ios2/')
     end
   end
 end

@@ -9,8 +9,12 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/andrew/lanyrd"
 
   gem.add_dependency 'faraday', '~> 0.7'
-  gem.add_dependency 'CFPropertyList'
-  
+
+  # Ruby 1.8 doesn't include JSON in the std lib
+  if RUBY_VERSION < "1.9"
+    s.add_dependency 'json',            '>= 1.7.5'
+  end
+
   gem.add_development_dependency 'bundler',     '~> 1.0'
   gem.add_development_dependency 'rspec',       '~> 2.6'
 

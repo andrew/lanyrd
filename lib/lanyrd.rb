@@ -1,4 +1,4 @@
 require 'faraday'
-require 'cfpropertylist'
+require 'json'
 require 'lanyrd/version'
 require 'lanyrd/client'
