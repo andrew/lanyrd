@@ -1,10 +1,9 @@
 # Lanyrd
 
-Wrapper around the Lanyrd iOS client api. Uses an event's shortcode for identification (the 5 characters at the end of the 'short url').
+Wrapper around the Lanyrd iOS client api.
 
-        @lanyrd   = Lanyrd::Client.new
-        attendees = @lanyrd.attendees("xxxxx") // replace xxxxx with shortcode
-
+    @lanyrd   = Lanyrd::Client.new
+    attendees = @lanyrd.attendees("fosdem")
 
 ## Development
 
