@@ -4,6 +4,7 @@ Wrapper around the Lanyrd iOS client api.
 
     @lanyrd   = Lanyrd::Client.new
     attendees = @lanyrd.attendees("fosdem")
+    profile = @lanyrd.profile("teabass")
 
 ## Development
 
