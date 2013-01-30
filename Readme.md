@@ -2,6 +2,23 @@
 
 Wrapper around the Lanyrd iOS client api.
 
+[![Gem Version](https://badge.fury.io/rb/lanyrd.png)](http://badge.fury.io/rb/lanyrd)
+[![Build Status](https://secure.travis-ci.org/andrew/lanyrd.png?branch=master)](http://travis-ci.org/andrew/lanyrd)
+[![Dependency Status](https://gemnasium.com/andrew/lanyrd.png)](https://gemnasium.com/andrew/lanyrd)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/andrew/lanyrd)
+
+## Installation 
+
+Using rubygems:
+
+    gem install lanyrd
+    
+or bundler:
+
+    gem 'lanyrd', '~> 0.1.0'
+
+## Usage
+
     @lanyrd   = Lanyrd::Client.new
     attendees = @lanyrd.attendees("fosdem")
     profile = @lanyrd.profile("teabass")
