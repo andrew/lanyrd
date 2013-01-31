@@ -8,7 +8,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Ruby wrapper for the Lanyrd API}
   gem.homepage      = "http://github.com/andrew/lanyrd"
 
-  gem.add_dependency 'faraday', '~> 0.7'
+  gem.add_dependency 'faraday_middleware',  '~> 0.9'
+  gem.add_dependency 'hashie',              '~> 1.2.0'
 
   # Ruby 1.8 doesn't include JSON in the std lib
   if RUBY_VERSION < "1.9"
