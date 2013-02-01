@@ -23,6 +23,8 @@ or bundler:
     attendees = @lanyrd.attendees("fosdem")
     profile = @lanyrd.profile("teabass")
 
+Full list of methods on rdoc: http://rubydoc.info/github/andrew/lanyrd/frames/index
+
 ## Development
 
 Source hosted at [GitHub](http://github.com/andrew/lanyrd).
