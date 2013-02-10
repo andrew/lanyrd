@@ -19,9 +19,11 @@ or bundler:
 
 ## Usage
 
-    @lanyrd   = Lanyrd::Client.new
-    attendees = @lanyrd.attendees("fosdem")
-    profile = @lanyrd.profile("teabass")
+```ruby
+@lanyrd   = Lanyrd::Client.new
+attendees = @lanyrd.attendees("fosdem")
+profile = @lanyrd.profile("teabass")
+```
 
 Full list of methods on rdoc: http://rubydoc.info/github/andrew/lanyrd/frames/index
 
