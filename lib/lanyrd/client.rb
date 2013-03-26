@@ -1,7 +1,11 @@
 module Lanyrd
   class Client
-    def search(query)
-      get("search/?q=#{query}")['sections'][0]['rows']
+
+    # Specify search term with params.
+    # Params include :topic => topic
+    def search(query, params = {})
+      params = URI.escape(params.collect{|k,v| "#{k}=#{v}"}.join('&')).insert 0, "&"
+      get("search/?q=#{query}#{params}")['sections'][0]['rows']
     end
 
     def popular
