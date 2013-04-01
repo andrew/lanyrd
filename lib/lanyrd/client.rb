@@ -43,11 +43,13 @@ module Lanyrd
     end
 
     def connection
-      Faraday.new 'http://lanyrd.com/mobile/ios2/' do |conn|
+      conn = Faraday.new 'http://lanyrd.com/mobile/ios2/' do |conn|
         conn.response :json
         conn.use FaradayMiddleware::Mashify
         conn.adapter Faraday.default_adapter
       end
+      conn.headers['X-Lanyrd-Auth'] = Time.now.hash.to_s
+      conn
     end
   end
 end
