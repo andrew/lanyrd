@@ -15,7 +15,7 @@ Using rubygems:
     
 or bundler:
 
-    gem 'lanyrd', '~> 0.1.0'
+    gem 'lanyrd', '~> 1.1.1'
 
 ## Usage
 
