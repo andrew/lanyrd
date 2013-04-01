@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "http://github.com/andrew/lanyrd"
 
   gem.add_dependency 'faraday_middleware',  '~> 0.9'
-  gem.add_dependency 'hashie',              '~> 1.2.0'
+  gem.add_dependency 'hashie',              '~> 2.0.3'
 
   # Ruby 1.8 doesn't include JSON in the std lib
   if RUBY_VERSION < "1.9"
