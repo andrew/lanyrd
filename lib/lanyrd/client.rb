@@ -48,7 +48,16 @@ module Lanyrd
         conn.use FaradayMiddleware::Mashify
         conn.adapter Faraday.default_adapter
       end
+
+      # iPhone App HTTP Headers
       conn.headers['X-Lanyrd-Auth'] = Time.now.hash.to_s
+      conn.headers['User-Agent'] = "Lanyrd-iOS/2.4.0 (iPhone OS 6.1.3; iPhone5,2 N42AP) build/61"
+      conn.headers['X-Lanyrd-Protocol'] = "4"
+      conn.headers['X-Lanyrd-Hardware'] = "320x568@2"
+      conn.headers['X-Lanyrd-DeviceID'] = "Device-String"
+      conn.headers['X-Lanyrd-PushEnvironment'] = "ios-production"
+      conn.headers['x-mycustomurl-intercept'] = "api"
+      
       conn
     end
   end
