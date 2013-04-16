@@ -17,15 +17,15 @@ module Lanyrd
     end
 
     def speakers(slug, year = Time.now.year)
-      get("#{year}/#{slug}/speakers/")['sections'][0]['rows']
+      get_rows(get("#{year}/#{slug}/speakers/")["sections"])
     end
 
     def attendees(slug, year = Time.now.year)
-      get("#{year}/#{slug}/attendees/")['sections'][0]['rows']
+      get_rows(get("#{year}/#{slug}/attendees/")['sections'])
     end
 
     def schedule(slug, year = Time.now.year)
-      get("#{year}/#{slug}/schedule/")['sections'][0]['rows']
+      get_rows(get("#{year}/#{slug}/schedule/")['sections'])
     end
 
     def profile(username)
@@ -59,6 +59,12 @@ module Lanyrd
       conn.headers['x-mycustomurl-intercept'] = "api"
       
       conn
+    end
+
+    def get_rows(section_list)
+      rows = []
+      section_list.each {|s| rows.concat(s["rows"])}
+      rows
     end
   end
 end
