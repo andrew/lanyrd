@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Ruby wrapper for the Lanyrd API}
   gem.summary       = %q{Ruby wrapper for the Lanyrd API}
   gem.homepage      = "http://github.com/andrew/lanyrd"
+  gem.license       = 'MIT'
 
   gem.add_dependency 'faraday_middleware',  '~> 0.9'
   gem.add_dependency 'hashie',              '~> 1.0'
