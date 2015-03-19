@@ -1,4 +1,4 @@
-# Lanyrd
+# [Lanyrd](http://libraries.io/rubygems/lanyrd)
 
 Wrapper around the Lanyrd iOS client api.
 
